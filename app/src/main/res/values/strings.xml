@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">framfun</string>
+
+    <string-array name="planets_array">
+        <item>北部</item>
+        <item>中部</item>
+        <item>南部</item>
+        <item>東部</item>
+
+    </string-array>
+
+</resources>
