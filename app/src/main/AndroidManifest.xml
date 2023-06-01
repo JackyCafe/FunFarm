@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="tw.edu.pu.funfarm">
-
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/app"
@@ -9,6 +8,9 @@
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.Funfarm">
+        <activity
+            android:name=".FarmActivity"
+            android:exported="false" />
         <activity
             android:name=".SettingActivity"
             android:exported="false" />

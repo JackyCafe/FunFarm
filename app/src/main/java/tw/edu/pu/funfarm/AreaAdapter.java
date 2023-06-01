@@ -2,6 +2,7 @@ package tw.edu.pu.funfarm;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,14 @@ public class AreaAdapter extends BaseAdapter {
         v = layoutInflater.inflate(R.layout.item,viewGroup,false);
         TextView textview = v.findViewById(R.id.area);
         textview.setText(datas.get(i));
+        textview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(context, FarmActivity.class);
+                it.putExtra("city",textview.getText().toString());
+                context.startActivity(it);
+            }
+        });
         return v;
     }
 }

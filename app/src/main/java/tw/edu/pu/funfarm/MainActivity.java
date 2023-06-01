@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         MyPreference myPreference = new MyPreference(); //宣告剛剛做好的PreferenceFragment
-        transaction.replace(android.R.id.content, myPreference); //將content內容取代為myPreference
-        transaction.commit(); //送出交易
+       // transaction.replace(android.R.id.content, myPreference); //將content內容取代為myPreference
+        //transaction.commit(); //送出交易
 
         setContentView(R.layout.activity_main);
         findView();
@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
         spinner.setSelection(2, false);
         spinner.setOnItemSelectedListener(spnOnItemSelected);
-        tvhello= findViewById(R.id.hello);
-        tvhello.setText("選項:"+spinner.getSelectedItem().toString());
+//        tvhello= findViewById(R.id.hello);
+//        tvhello.setText("選項:"+spinner.getSelectedItem().toString());
 
         calender.setOnClickListener(v -> {
             Intent intent = new Intent();
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
             lv.setAdapter(adapter);
 
             //String sInfo=parent.getSelectedItem().toString();
-            tvhello.setText("選項"+sPos+":"+sInfo);
+//            tvhello.setText("選項"+sPos+":"+sInfo);
         }
         public void onNothingSelected(AdapterView<?> parent) {
             //
